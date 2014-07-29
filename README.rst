@@ -137,7 +137,7 @@ Templates
 Using django_countries in your templates
 ----------------------------------------
 
-You can use django_countries in your templates, for example to create a dropdown box with a list of all counties::
+You can use django_countries in your templates, for example to create a dropdown box with a list of countries::
     
     {{ load django_countries }}
     <select>
