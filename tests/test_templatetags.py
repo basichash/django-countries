@@ -7,6 +7,7 @@ class Person(models.Model):
 	country = models.CountryField()
 
 class PersonTestCase(TestCase):
+	
 	def __init__(self):
 		self.person1 = Person.objects.create(name='Chris', country='New Zealand')
 		self.person2 = Person.objects.create(name='Justin', country='Canada')
