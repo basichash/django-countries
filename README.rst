@@ -128,3 +128,20 @@ Alternatively, you can specify a different URL on a specific ``CountryField``::
         name = models.CharField(max_length=100)
         country = CountryField(
             countries_flag_url='//flags.example.com/{code}.png')
+
+
+Templates
+=============
+
+
+Using django_countries in your templates
+----------------------------------------
+
+You can use django_countries in your templates, for example to create a dropdown box with a list of all counties::
+    
+    {{ load django_countries }}
+    <select>
+        {% for country in countries %}
+        <option name="country" value="{{ country.code }}">{{ country.name }} <img src="{{ country.flag }}" /></option>
+        {% endfor %}
+    </select>
